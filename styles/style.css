@@ -205,6 +205,48 @@ main > section{
     color: rgba(14, 14, 14, 0.6);
 }
 
+/* Your Opinion Styles */
+.opinion h2{
+    margin-bottom: 24px;
+}
+
+.opinion-box{
+    padding: 32px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: rgba(198, 228, 214, 1);
+}
+
+th, td{
+    padding: 24px;
+    text-align: left;
+}
+td{
+    border: 1px solid rgba(14, 14, 14, 0.15)
+}
+th:last-child, td:last-child{
+    text-align: center;
+}
+select{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(14, 14, 14, 1);
+    padding: 12px 6px;
+    border: 1px solid rgba(14, 14, 14, 1);
+    border-radius: 4px;
+    background: rgba(198, 228, 214, 1);
+    cursor: pointer;
+}
+
+
 
 
 
@@ -220,7 +262,7 @@ main > section{
     .pillars-of-bd{
         padding: 10px;
     }
-    .pillars-of-bd h2, .vision-title, .vision-des {
+    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title {
         text-align: center;
     }
     .pillar-cards{
@@ -241,7 +283,7 @@ main > section{
         flex-direction: column;
         gap: 50px;
     }
-    .pillars-of-bd h2, .vision-title, .vision-des{
+    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title{
         text-align: center;
     }
     .pillar-cards, .vision-cards{
