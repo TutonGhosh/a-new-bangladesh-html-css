@@ -16,8 +16,10 @@
 .display-flex{
     display: flex;
 }
-.primary-color{
+.primary-title{
     color: rgba(14, 14, 14, 1);
+    font-size: 40px;
+    font-weight: 700;
 }
 .primary-des{
     font-size: 16px;
@@ -90,8 +92,6 @@ main > section{
 
 /* Pillars of Bangladesh 2.0 Styles */
 .pillars-of-bd h2{
-    font-size: 40px;
-    font-weight: 700;
     margin-bottom: 32px;
 }
 .pillar-cards .p-card{
@@ -119,13 +119,98 @@ main > section{
     margin: 0;
 }
 
+/* The Vision of Future Styles */
+.vision-of-future h2{
+    margin-bottom: 32px;
+}
+.vision-of-future > p{
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.vision-cards{
+    align-items: center;
+    gap: 24px;
+}
+.v-card{
+    width: 400px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 16px;
+}
+.blue-card{
+    background-color: rgba(84, 144, 245, 0.2);
+}
+.green-card{
+    background-color: rgba(198, 228, 214, 1);
+}
+.yellow-card{
+    background-color: rgba(247, 235, 207, 1);
+}
+.vision-cards .v-card h5{
+    font-size: 16px;
+    font-weight: 700;
+}
+.vision-cards .v-card img{
+    margin-bottom: 32px;
+}
+.vision-cards .v-card h5{
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.vision-cards .v-card p{
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+.v-card button{
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 20px 11px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.blue-card button{
+    background-color: #5490F5;
+}
+.green-card button{
+    background-color: #09A15C;
+}
+.yellow-card button{
+    background-color: #FFC239;
+}
+.yunus-card{
+    background-image: url(../assets/images/quote-bg.png);
+    background-repeat: no-repeat;
+    background-position: 24px 33px;
+    margin-top: 32px;
+    padding: 48px 24px;
+    border: 1px solid rgba(14, 14, 14, 0.15);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.y-des{
+    margin-bottom: 12px;
+}
+.y-name{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.y-title{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(14, 14, 14, 0.6);
+}
 
 
 
 
 /* Small Device Responsive */
 @media screen and (max-width: 576px) {
-    .nav, .banner, .pillar-cards{
+    .nav, .banner, .pillar-cards, .vision-cards{
         flex-direction: column;
         padding: 10px;
     }
@@ -135,11 +220,18 @@ main > section{
     .pillars-of-bd{
         padding: 10px;
     }
-    .pillars-of-bd h2{
+    .pillars-of-bd h2, .vision-title, .vision-des {
         text-align: center;
     }
     .pillar-cards{
         align-items: center;
+    }
+    .v-card{
+        width: auto;
+        height: auto;
+    }
+    .vision-cards .v-card p{
+        margin-bottom: 30px;
     }
 }
 
@@ -149,12 +241,24 @@ main > section{
         flex-direction: column;
         gap: 50px;
     }
-    .pillars-of-bd h2{
+    .pillars-of-bd h2, .vision-title, .vision-des{
         text-align: center;
     }
-    .pillar-cards{
+    .pillar-cards, .vision-cards{
         display: grid;
         grid-template-columns: repeat(2, 300px);
         justify-content: center;
+    }
+    .vision-des{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .vision-cards .yellow-card:nth-child(3){
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+    .v-card{
+        width: auto;
+        height: auto;
     }
 }
