@@ -239,12 +239,53 @@ select{
     font-size: 16px;
     font-weight: 600;
     color: rgba(14, 14, 14, 1);
-    padding: 12px 6px;
+    padding: 12px;
     border: 1px solid rgba(14, 14, 14, 1);
     border-radius: 4px;
     background: rgba(198, 228, 214, 1);
     cursor: pointer;
 }
+
+/* Recent News Styles */
+.n-card{
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 48px;
+    gap: 32px;
+    margin-bottom: 25px;
+}
+.recent-news .n-title{
+    margin-bottom: 24px;
+}
+.recent-news .n-des{
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.n-content h4{
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.n-content img{
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.date-time{
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+.n-p{
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.n-card .n-img img{
+    border-radius: 24px;
+}
+
+
 
 
 
@@ -252,7 +293,7 @@ select{
 
 /* Small Device Responsive */
 @media screen and (max-width: 576px) {
-    .nav, .banner, .pillar-cards, .vision-cards{
+    .nav, .banner, .pillar-cards, .vision-cards, .n-card{
         flex-direction: column;
         padding: 10px;
     }
@@ -262,7 +303,7 @@ select{
     .pillars-of-bd{
         padding: 10px;
     }
-    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title {
+    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des{
         text-align: center;
     }
     .pillar-cards{
@@ -275,15 +316,27 @@ select{
     .vision-cards .v-card p{
         margin-bottom: 30px;
     }
+    .opinion-box, td:first-child{
+        padding: 10px;
+    }
+    .n-card .n-img img{
+        width: 100%
+    }
+    .n-card .n-content button{
+        margin-bottom: 20px;
+    }
+    .n-card-2{
+        flex-direction: column-reverse;
+    }
 }
 
 /* Medium Device Responsive */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-    .banner{
+    .banner, .n-card{
         flex-direction: column;
         gap: 50px;
     }
-    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title{
+    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des{
         text-align: center;
     }
     .pillar-cards, .vision-cards{
@@ -291,7 +344,7 @@ select{
         grid-template-columns: repeat(2, 300px);
         justify-content: center;
     }
-    .vision-des{
+    .vision-des, .n-des{
         max-width: 600px;
         margin: 0 auto;
     }
@@ -302,5 +355,11 @@ select{
     .v-card{
         width: auto;
         height: auto;
+    }
+    .n-img img{
+        width: 100%;
+    }
+    .n-card-2{
+        flex-direction: column-reverse;
     }
 }
