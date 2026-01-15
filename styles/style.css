@@ -285,6 +285,61 @@ select{
     border-radius: 24px;
 }
 
+/* Donate Today Styles */
+.donate-today .dt-title{
+    text-align: center;
+}
+.donate-today .dt-des{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.donate-cards{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.d-card{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(14, 14, 14, 0.8);
+    padding: 10px 40px;
+    border: 1px solid rgba(14, 14, 14, 0.15);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.d-card-2{
+    background-color: rgba(198, 228, 214, 1);
+}
+form input[type="text"]{
+    display: block;
+    max-width: 1032px;
+    height: 64px;
+    border: 0;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(14, 14, 14, 0.15);
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+form input::placeholder{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+}
+form input:focus{ 
+    text-align: center; 
+}
+form input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
 
 
 
@@ -303,7 +358,7 @@ select{
     .pillars-of-bd{
         padding: 10px;
     }
-    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des{
+    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des, .dt-des{
         text-align: center;
     }
     .pillar-cards{
@@ -328,6 +383,14 @@ select{
     .n-card-2{
         flex-direction: column-reverse;
     }
+    .donate-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    form input[type="text"]{
+        width: 100%;
+    }
 }
 
 /* Medium Device Responsive */
@@ -339,7 +402,7 @@ select{
     .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des{
         text-align: center;
     }
-    .pillar-cards, .vision-cards{
+    .pillar-cards, .vision-cards, .donate-cards{
         display: grid;
         grid-template-columns: repeat(2, 300px);
         justify-content: center;
@@ -361,5 +424,11 @@ select{
     }
     .n-card-2{
         flex-direction: column-reverse;
+    }
+    .donate-cards{
+        gap: 50px;
+    }
+    form input[type="text"]{
+        width: 100%;
     }
 }
