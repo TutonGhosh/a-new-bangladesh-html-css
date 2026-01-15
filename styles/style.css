@@ -312,9 +312,10 @@ select{
 .d-card-2{
     background-color: rgba(198, 228, 214, 1);
 }
-form input[type="text"]{
+.dt-form input[type="text"]{
     display: block;
     max-width: 1032px;
+    width: 100%;
     height: 64px;
     border: 0;
     border-radius: 10px;
@@ -323,18 +324,70 @@ form input[type="text"]{
     margin: 0 auto;
     margin-bottom: 32px;
 }
-form input::placeholder{
+.dt-form input::placeholder{
     font-size: 20px;
     font-weight: 400;
     padding: 20px 0px 20px 0px;
     text-align: center;
 }
-form input:focus{ 
+.dt-form input:focus{ 
     text-align: center; 
 }
-form input[type="submit"]{
+.dt-form input[type="submit"]{
     display: block;
     margin: 0 auto;
+}
+
+/* Subscribe Newsletter Styles */
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    background-color: rgba(198, 228, 214, 1);
+    padding: 80px 100px;
+}
+.newsletter .nl-title{
+    margin-bottom: 12px;
+}
+.newsletter .nl-des{
+    text-align: center;
+    max-width: 622px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+.newsletter .nl-des-2{
+    margin-top: 24px;
+}
+.nl-form{
+    display: flex;
+}
+.nl-form input[type="email"]{
+    width: 600px;
+    height: 55px;
+    border: 0;
+    border-radius: 8px 0px 0px 8px;
+    background-color: #FFFFFF;
+}
+.nl-form input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(14, 14, 14, 0.3);
+    text-align: center;
+}
+.nl-form input:focus{ 
+    text-align: center; 
+}
+.nl-form input[type="submit"]{
+    width: 150px;
+    height: 56px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #006A50;
 }
 
 
@@ -358,7 +411,7 @@ form input[type="submit"]{
     .pillars-of-bd{
         padding: 10px;
     }
-    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des, .dt-des{
+    .pillars-of-bd h2, .vision-title, .vision-des, .opinion-title, .n-title, .n-des, .dt-des, .nl-title, .nl-des, .nl-des-2{
         text-align: center;
     }
     .pillar-cards{
@@ -383,13 +436,28 @@ form input[type="submit"]{
     .n-card-2{
         flex-direction: column-reverse;
     }
+    .d-card{
+        text-align: center;
+        padding: 10px;
+    }
     .donate-cards{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-    form input[type="text"]{
+    .dt-form input[type="text"]{
         width: 100%;
+    }
+    .nl-des{
+        width: 100%;
+    }
+    .nl-form input[type="email"]{
+        width: 225px;
+        height: 50px;
+    }
+    .nl-form input[type="submit"]{
+        width: 100px;
+        height: 50px;
     }
 }
 
@@ -425,10 +493,14 @@ form input[type="submit"]{
     .n-card-2{
         flex-direction: column-reverse;
     }
+    .d-card{
+        text-align: center;
+    }
     .donate-cards{
         gap: 50px;
     }
-    form input[type="text"]{
+    .dt-form input[type="text"]{
         width: 100%;
     }
+    
 }
